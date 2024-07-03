@@ -7,10 +7,6 @@ CLOBBER.include("tmp")
 
 Dir["integration/tasks/**/*.rake"].each { |f| import f }
 
-require "rubocop/rake_task"
-
-RuboCop::RakeTask.new
-
 desc "Open a pry console in the Backup context"
 task :console do
   require "pry"
